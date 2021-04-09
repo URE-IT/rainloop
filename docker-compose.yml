@@ -1,0 +1,12 @@
+version: "3"
+services:
+  webmail:
+    container_name: webmail
+    restart: always
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - 8888:8888
+    volumes:
+      - /root/volumenes/webmail.ure.es:/rainloop/data
